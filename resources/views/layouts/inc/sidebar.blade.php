@@ -36,6 +36,12 @@
                     <p class="sidebar-normal">Carregadores</p>
                 </a>
             </li>
+            <li class="nav-item {{ Request::is('add-carregador') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ url('add-carregador') }}">
+                    <i class="material-icons">playlist_add</i>
+                    <span class="sidebar-normal">Adicionar Carregador</span>
+                </a>
+            </li>
             <li class="nav-item {{ Request::is('categories') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ url('categories') }}">
                     <i class="material-icons">content_paste</i>

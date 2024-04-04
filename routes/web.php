@@ -116,4 +116,6 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('delete-cliente/{id}',[ClienteController::class, 'destroy']);  
 
     Route::get('carregadores', 'Admin\CarregadorController@index');
+    Route::get('add-carregador', 'Admin\CarregadorController@add');
+    Route::post('insert-carregador', 'Admin\CarregadorController@insert');
 });
