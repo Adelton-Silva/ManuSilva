@@ -27,7 +27,7 @@ class CarregadorController extends Controller
     }
     public function insert(Request $request)
     {
-        $carregador = new Service();
+        $carregador = new Carregador();
         if($request->hasFile('image'))
         {
             $file = $request->file('image');

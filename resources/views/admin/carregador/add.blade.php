@@ -26,28 +26,28 @@
                     <label for="">Modelo</label>
                     <input type="text" class="form-control" name="modelo" required="true">
                 </div>
-                <div class="col-md-12 mb-3">
-                    <label for="">Numero de Serie</label>
-                    <textarea name="num_serie" rows="3" class="form-control" required="true"></textarea>
-                </div>
-                <div class="col-md-12 mb-3">
-                    <label for="">Descrição Avaria</label>
-                    <textarea name="descri_avaria" rows="3" class="form-control" required="true"></textarea>
+                <div class="col-md-6 mb-3">
+                    <label for="">Número de Série</label>
+                    <input type="text" name="num_serie" class="form-control" required="true"></textarea>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Data Entrada</label>
                     <input type="date" class="form-control" name="data_entrada" required="true">
                 </div>
                 <div class="col-md-12 mb-3">
-                    <label for="">Descrição Atividade</label>
-                    <textarea name="descri_atividade" rows="3" class="form-control" required="true"></textarea>
+                    <label for="">Descrição Avaria</label>
+                    <textarea name="descri_avaria" rows="3" class="form-control" required="true"></textarea>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="">Relatório Atividade</label>
+                    <textarea name="descri_atividade" rows="3" class="form-control"></textarea>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Data Saída</label>
-                    <input type="date" class="form-control" name="data_saida" required="true">
+                    <input type="date" class="form-control" name="data_saida">
                 </div>
                 <div class="col-md-12">
-                    <input type="file" name="image" class="form-control" required="true">
+                    <input type="file" name="image" class="form-control">
                 </div>
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary">Adicionar</button>
