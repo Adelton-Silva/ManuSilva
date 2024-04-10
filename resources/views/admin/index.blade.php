@@ -2,9 +2,6 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
                 <div class="card">
                     <!-- Page Heading -->
                     <div class="card-header bg-primary">
@@ -216,9 +213,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>

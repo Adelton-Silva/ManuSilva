@@ -17,6 +17,7 @@ class carregador extends Model
         'descri_avaria',
         'data_entrada',
         'descri_atividade',
+        'estado',
         'data_saida',
         'image',
     ];

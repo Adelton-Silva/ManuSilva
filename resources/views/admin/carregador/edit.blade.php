@@ -3,49 +3,47 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h4>Adicionar Carregador</h4>
+        <h4>Editar Carregador</h4>
     </div>
     <div class="card-body">
-        <form action="{{ url('insert-carregador')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{ url('update-carregador/'.$carregador->id)}}" method="POST" enctype="multipart/form-data">
+            @method('PUT')
             @csrf
             <div class="row">
                 <div class="col-md-12 mb-3">
                     <label for="">Cliente</label>
-                    <select class="form-select" name="cliente_id" required="true">                   
-                        <option value="">Selecione o Cliente</option>
-                        @foreach($cliente as $item)
-                             <option value="{{$item->id}}">{{$item->name}}</option>
-                        @endforeach
+                    <select class="form-select">
+                        <option value="">{{$carregador->cliente->name}}</option>
                     </select>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Marca</label>
-                    <input type="text" class="form-control" name="marca" required="true"> 
+                    <input type="text" value="{{$carregador->marca}}" class="form-control" name="marca">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Modelo</label>
-                    <input type="text" class="form-control" name="modelo" required="true">
+                    <input type="text" value="{{$carregador->modelo}}" class="form-control" name="modelo">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Número de Série</label>
-                    <input type="text" name="num_serie" class="form-control" required="true"></textarea>
+                    <input type="text" value="{{$carregador->num_serie}}" class="form-control" name="num_serie">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Data Entrada</label>
-                    <input type="date" class="form-control" name="data_entrada" required="true">
+                    <input type="date" value="{{$carregador->data_entrada}}" class="form-control" name="data_entrada">
                 </div>
                 <div class="col-md-12 mb-3">
-                    <label for="">Descrição Avaria</label>
-                    <textarea name="descri_avaria" rows="3" class="form-control" required="true"></textarea>
+                    <label for="">Descrição de Avaria</label>
+                    <textarea name="descri_avaria" rows="3" class="form-control">{{$carregador->descri_avaria}}</textarea>
                 </div>
                 <div class="col-md-12 mb-3">
                     <label for="">Relatório Atividade</label>
-                    <textarea name="descri_atividade" rows="3" class="form-control"></textarea>
+                    <textarea name="descri_atividade" rows="3" class="form-control">{{$carregador->descri_atividade}}</textarea>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Estado</label>
-                    <select class="form-select" name="estado" required="true">                   
-                        <option value="">Selecione o estado em que o carregador se encontra</option>
+                    <select class="form-select" name="estado">
+                        <option value="">{{$carregador->estado}}</option>
                         <option value="Em Teste">Em Teste</option>
                         <option value="A espera do material">A espera do material</option>
                         <option value="Teste Final">Teste Final</option>
@@ -53,16 +51,19 @@
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Data Saída</label>
-                    <input type="date" class="form-control" name="data_saida">
+                    <input type="date" value="{{$carregador->data_saida}}" class="form-control" name="data_saida">
                 </div>
+                @if($carregador->image)
+                    <img src="{{asset('assets/uploads/carregador/'.$carregador->image)}}" alt="">
+                @endif
                 <div class="col-md-12">
                     <input type="file" name="image" class="form-control">
                 </div>
                 <div class="col-md-12">
-                    <button type="submit" class="btn btn-primary">Adicionar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
             </div>
         </form>
     </div>
 </div>
-@endsection
+@endsection 

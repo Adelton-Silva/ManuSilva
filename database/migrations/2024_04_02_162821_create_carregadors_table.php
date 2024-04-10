@@ -22,6 +22,7 @@ return new class extends Migration
             $table->longText('descri_avaria');
             $table->string('data_entrada');
             $table->longText('descri_atividade');
+            $table->string('estado');
             $table->string('data_saida');
             $table->string('image');
             $table->timestamps();

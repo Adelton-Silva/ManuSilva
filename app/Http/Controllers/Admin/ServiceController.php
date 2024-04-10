@@ -30,7 +30,7 @@ class ServiceController extends Controller
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
             $filename = time().'.'.$ext;
-            $file->move('assets/uploads/services',$filename);
+            $file->move('assets/uploads/carregador',$filename);
             $services->image = $filename;
         }
         $services->cate_id = $request->input('cate_id');

@@ -18,6 +18,7 @@
                     <th style="text-align:center">Des da Avaria</th>
                     <th style="text-align:center">Data Entrada</th>
                     <th style="text-align:center">Des da Atividade</th>
+                    <th style="text-align:center">Estado</th>
                     <th style="text-align:center">Data Saída</th>
                     <th style="text-align:center">Imagem</th>
                     <th style="text-align:center">Ação</th>
@@ -31,16 +32,17 @@
                     <td style="text-align:center">{{$item->marca}}</td>
                     <td style="text-align:center">{{$item->modelo}}</td>
                     <td style="text-align:center">{{$item->num_serie}}</td>
-                    <td>{{$item->descri_avaria}}</td>
+                    <td style="text-align:center">{{$item->descri_avaria}}</td>
                     <td style="text-align:center">{{$item->data_entrada}}</td>
-                    <td>{{$item->descri_atividade}}</td>
+                    <td style="text-align:center">{{$item->descri_atividade}}</td>
+                    <td style="text-align:center">{{$item->estado}}</td>
                     <td style="text-align:center">{{$item->data_saida}}</td>
                     <td style="text-align:center">
-                       <img src="{{asset('assets/uploads/services/'.$item->image)}}" class="cate-image" alt="Image here"/>
+                       <img src="{{asset('assets/uploads/carregador/'.$item->image)}}" class="cate-image" alt="Image here"/>
                     </td> 
                     <td style="text-align:center">
-                        <a href="{{ url('edit-service/'.$item->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
-                        <a href="{{ url('delete-service/'.$item->id)}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Eliminar</a>
+                        <a href="{{ url('edit-carregador/'.$item->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
+                        <a href="{{ url('delete-carregador/'.$item->id)}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Eliminar</a>
                     </td>
                     
                 </tr>

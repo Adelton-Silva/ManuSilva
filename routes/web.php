@@ -14,6 +14,7 @@ use App\Http\Controllers\Frontend\ReviewController;
 use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Frontend\WishlistController;
 use App\Http\Controllers\Admin\ClienteController;
+use App\Http\Controllers\Admin\CarregadorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -118,4 +119,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('carregadores', 'Admin\CarregadorController@index');
     Route::get('add-carregador', 'Admin\CarregadorController@add');
     Route::post('insert-carregador', 'Admin\CarregadorController@insert');
+    Route::get('edit-carregador/{id}',[CarregadorController::class,'edit']);
+    Route::put('update-carregador/{id}',[CarregadorController::class,'update']);
+    Route::get('delete-carregador/{id}',[CarregadorController::class, 'destroy']);
 });
