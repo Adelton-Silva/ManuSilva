@@ -38,23 +38,6 @@
                     <label for="">Descrição Avaria</label>
                     <textarea name="descri_avaria" rows="3" class="form-control" required="true"></textarea>
                 </div>
-                <div class="col-md-12 mb-3">
-                    <label for="">Relatório Atividade</label>
-                    <textarea name="descri_atividade" rows="3" class="form-control"></textarea>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="">Estado</label>
-                    <select class="form-select" name="estado" required="true">                   
-                        <option value="">Selecione o estado em que o carregador se encontra</option>
-                        <option value="Em Teste">Em Teste</option>
-                        <option value="A espera do material">A espera do material</option>
-                        <option value="Teste Final">Teste Final</option>
-                    </select>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="">Data Saída</label>
-                    <input type="date" class="form-control" name="data_saida">
-                </div>
                 <div class="col-md-12">
                     <input type="file" name="image" class="form-control">
                 </div>

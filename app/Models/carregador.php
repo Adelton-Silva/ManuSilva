@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class carregador extends Model
 {
     use HasFactory;
-    protected $table = 'carregadors';
+    protected $table = 'carregadors'; 
     protected $fillable = [
         'cliente_id',
         'marca',
@@ -16,9 +16,6 @@ class carregador extends Model
         'num_serie',
         'descri_avaria',
         'data_entrada',
-        'descri_atividade',
-        'estado',
-        'data_saida',
         'image',
     ];
 

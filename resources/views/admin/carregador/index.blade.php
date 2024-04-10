@@ -17,9 +17,6 @@
                     <th style="text-align:center">Num de Série</th>
                     <th style="text-align:center">Des da Avaria</th>
                     <th style="text-align:center">Data Entrada</th>
-                    <th style="text-align:center">Des da Atividade</th>
-                    <th style="text-align:center">Estado</th>
-                    <th style="text-align:center">Data Saída</th>
                     <th style="text-align:center">Imagem</th>
                     <th style="text-align:center">Ação</th>
                 </tr>
@@ -34,9 +31,6 @@
                     <td style="text-align:center">{{$item->num_serie}}</td>
                     <td style="text-align:center">{{$item->descri_avaria}}</td>
                     <td style="text-align:center">{{$item->data_entrada}}</td>
-                    <td style="text-align:center">{{$item->descri_atividade}}</td>
-                    <td style="text-align:center">{{$item->estado}}</td>
-                    <td style="text-align:center">{{$item->data_saida}}</td>
                     <td style="text-align:center">
                        <img src="{{asset('assets/uploads/carregador/'.$item->image)}}" class="cate-image" alt="Image here"/>
                     </td> 

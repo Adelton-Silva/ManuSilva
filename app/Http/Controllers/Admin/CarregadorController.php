@@ -43,9 +43,6 @@ class CarregadorController extends Controller
         $carregador->num_serie = $request->input('num_serie');
         $carregador->descri_avaria = $request->input('descri_avaria');
         $carregador->data_entrada = $request->input('data_entrada');
-        $carregador->descri_atividade = $request->input('descri_atividade');
-        $carregador->estado = $request->input('estado');
-        $carregador->data_saida = $request->input('data_saida');
         $carregador->save();
         return redirect('carregadores')->with('status',"Carregador adicionado com sucesso!");
     }
@@ -76,9 +73,6 @@ class CarregadorController extends Controller
         $carregador->num_serie = $request->input('num_serie');
         $carregador->descri_avaria = $request->input('descri_avaria');
         $carregador->data_entrada = $request->input('data_entrada');
-        $carregador->descri_atividade = $request->input('descri_atividade');
-        $carregador->estado = $request->input('estado');
-        $carregador->data_saida = $request->input('data_saida');
         $carregador->update();
         return redirect('carregadores')->with('status',"Carregador atualizado com sucesso!"); 
     }

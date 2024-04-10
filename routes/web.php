@@ -15,6 +15,7 @@ use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Frontend\WishlistController;
 use App\Http\Controllers\Admin\ClienteController;
 use App\Http\Controllers\Admin\CarregadorController;
+use App\Http\Controllers\Admin\ReparacaoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -122,4 +123,11 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('edit-carregador/{id}',[CarregadorController::class,'edit']);
     Route::put('update-carregador/{id}',[CarregadorController::class,'update']);
     Route::get('delete-carregador/{id}',[CarregadorController::class, 'destroy']);
+
+    Route::get('reparacaos', 'Admin\ReparacaoController@index');
+    Route::get('add-reparacao', 'Admin\ReparacaoController@add');
+    Route::post('insert-reparacao', 'Admin\ReparacaoController@insert');
+    Route::get('edit-reparacao/{id}',[ReparacaoController::class,'edit']);
+    Route::put('update-reparacao/{id}',[ReparacaoController::class,'update']);
+    Route::get('delete-reparacao/{id}',[ReparacaoController::class, 'destroy']);
 });

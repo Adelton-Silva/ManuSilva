@@ -32,15 +32,15 @@
                     </li>
                     <li class="nav-item {{ Request::is('add-cliente') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ url('add-cliente') }}">
-                            <i class="material-icons">playlist_add</i>
+                            <i class="material-icons">add_box</i>
                             <span class="sidebar-normal">Adicionar Cliente</span>
                         </a>
                     </li>
 		            </ul>
 	        </li>
-            <li class="nav-item has-submenu {{ (Request::is('carregadores') or Request::is('add-carregador') ) ? 'active' : '' }}" >
+            <li class="nav-item has-submenu {{ (Request::is('carregadores') or Request::is('add-carregador') or Request::is('reparacaos') or Request::is('add-reparacao')) ? 'active' : '' }}" >
 		        <a class="nav-link" href="#"> 
-                    <i class="material-icons">swipe_left</i>
+                    <i class="material-icons">ev_station</i>
                     <p class="sidebar-normal">Carregadores</p>
                 </a>
 		            <ul class="submenu collapse">
@@ -52,8 +52,20 @@
                     </li>
                     <li class="nav-item {{ Request::is('add-carregador') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ url('add-carregador') }}">
-                            <i class="material-icons">playlist_add</i>
+                            <i class="material-icons">add_box</i>
                             <span class="sidebar-normal">Adicionar Carregador</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ Request::is('reparacaos') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ url('reparacaos') }}">
+                            <i class="material-icons">settings</i>
+                            <span class="sidebar-normal">Reparação</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ Request::is('add-reparacao') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ url('add-reparacao') }}">
+                            <i class="material-icons">add_box</i>
+                            <span class="sidebar-normal">Adicionar Reparação</span>
                         </a>
                     </li>
 		            </ul>

@@ -13,7 +13,7 @@
                 <div class="col-md-12 mb-3">
                     <label for="">Cliente</label>
                     <select class="form-select">
-                        <option value="">{{$carregador->cliente->name}}</option>
+                        <option value="">{{$carregador->cliente->name}}</option> 
                     </select>
                 </div>
                 <div class="col-md-6 mb-3">
@@ -35,23 +35,6 @@
                 <div class="col-md-12 mb-3">
                     <label for="">Descrição de Avaria</label>
                     <textarea name="descri_avaria" rows="3" class="form-control">{{$carregador->descri_avaria}}</textarea>
-                </div>
-                <div class="col-md-12 mb-3">
-                    <label for="">Relatório Atividade</label>
-                    <textarea name="descri_atividade" rows="3" class="form-control">{{$carregador->descri_atividade}}</textarea>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="">Estado</label>
-                    <select class="form-select" name="estado">
-                        <option value="">{{$carregador->estado}}</option>
-                        <option value="Em Teste">Em Teste</option>
-                        <option value="A espera do material">A espera do material</option>
-                        <option value="Teste Final">Teste Final</option>
-                    </select>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="">Data Saída</label>
-                    <input type="date" value="{{$carregador->data_saida}}" class="form-control" name="data_saida">
                 </div>
                 @if($carregador->image)
                     <img src="{{asset('assets/uploads/carregador/'.$carregador->image)}}" alt="">
