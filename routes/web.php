@@ -16,7 +16,7 @@ use App\Http\Controllers\Frontend\WishlistController;
 use App\Http\Controllers\Admin\ClienteController;
 use App\Http\Controllers\Admin\CarregadorController;
 use App\Http\Controllers\Admin\ReparacaoController;
-
+use App\Http\Controllers\Frontend\TecnicoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -77,6 +77,12 @@ Route::middleware(['auth'])->group(function(){
     Route::get('wishlist', [WishlistController::class, 'index']);
 
     Route::post('proceed-to-pay', [CheckoutController::class, 'razorpaycheck']);
+
+    Route::get('tecnico', 'Frontend\TecnicoController@index');
+    Route::get('edit-tecnico/{id}',[TecnicoController::class,'edit']);
+    Route::put('update-tecnico/{id}',[TecnicoController::class,'update']);
+    Route::get('add-tecnico', 'Frontend\TecnicoController@add');
+    Route::post('insert-tecnico', 'Frontend\TecnicoController@insert');
    
    
 });
@@ -130,4 +136,6 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('edit-reparacao/{id}',[ReparacaoController::class,'edit']);
     Route::put('update-reparacao/{id}',[ReparacaoController::class,'update']);
     Route::get('delete-reparacao/{id}',[ReparacaoController::class, 'destroy']);
+
+    
 });

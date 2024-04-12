@@ -33,9 +33,9 @@
 
 <body>
     <div class="wrapper ">
-        @include('layouts.inc.sidebar')
+        @include('layouts.inc.tecnicosidebar')
         <div class="main-panel">
-           @include('layouts.inc.adminnav')
+           @include('layouts.inc.tecniconav')
             <div class="content">
                 @yield('content')
             </div>
