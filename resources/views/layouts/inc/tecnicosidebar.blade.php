@@ -11,26 +11,6 @@
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">
-            <li class="nav-item has-submenu {{ (Request::is('clientes') or Request::is('add-cliente') ) ? 'active' : '' }}" >
-		        <a class="nav-link" href="#"> 
-                    <i class="material-icons">persons</i>
-                    <p class="sidebar-normal">Clientes</p>
-                </a>
-		            <ul class="submenu collapse">
-                    <li class="nav-item {{ Request::is('clientes') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ url('clientes') }}">
-                            <i class="material-icons">content_paste</i>
-                            <p class="sidebar-normal">Listar Clientes</p>
-                        </a>
-                    </li>
-                    <li class="nav-item {{ Request::is('add-cliente') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ url('add-cliente') }}">
-                            <i class="material-icons">add_box</i>
-                            <span class="sidebar-normal">Adicionar Cliente</span>
-                        </a>
-                    </li>
-		            </ul>
-	        </li>
             <li class="nav-item has-submenu {{ (Request::is('carregadores') or Request::is('add-carregador') or Request::is('reparacaos') or Request::is('add-reparacao')) ? 'active' : '' }}" >
 		        <a class="nav-link" href="#"> 
                     <i class="material-icons">ev_station</i>

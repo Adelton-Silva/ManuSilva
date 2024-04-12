@@ -3,13 +3,13 @@
     <a class="navbar-brand" href="{{ url('/')}}">Home-Service</a>
 
     <div class="search-bar">
-      <form action="{{ url('searchservices') }}" method="POST">
+      <!--<form action="{{ url('searchservices') }}" method="POST">
         @csrf
       <div class="input-group">
         <input type="search" class="form-control" id="search_services" name="service_name" required placeholder="procurar serviços" aria-describedby="basic-addon1">
         <button type="submit" class="input-group-text"><i class="fa fa-search"></i></button>
       </div>
-    </form>
+    </form>-->
     </div>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,35 +17,22 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{ url('/')}}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('category')}}">{{ __('Categoria') }}</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('cart')}}">{{ __('Carinho') }}
-            <span class="badge badge-pill bg-primary cart-count">0</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('wishlist')}}">{{ __('Lista Desejo') }}
-          <span class="badge badge-pill bg-success wishlist-count">0</span>
-          </a>
-        </li>
+        
+       
+        
 
-        @guest
+      <!--@guest
         @if (Route::has('login'))
         <li class="nav-item">
           <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
         </li>
-        @endif
+        @endif-->
 
-        @if (Route::has('register'))
+        <!--@if (Route::has('register'))
         <li class="nav-item">
           <a class="nav-link" href="{{ route('register') }}">{{ __('Registar') }}</a>
         </li>
-        @endif
+        @endif-->
         @else
         <li class="nav-item dropdown">
           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

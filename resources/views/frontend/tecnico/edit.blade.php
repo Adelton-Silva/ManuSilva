@@ -1,4 +1,4 @@
-@extends('layouts.inc.front')
+@extends('layouts.inc.tecnico')
 
 @section('content')
 <div class="card">
