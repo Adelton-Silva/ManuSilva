@@ -7,8 +7,12 @@
   -->
     <div class="logo">
         <a href="#" class="simple-text logo-normal">
-            Home Service
+            ManuSilva
+            <img src="http://localhost:8000/public/image/logos/visa.png" alt="image">
         </a>
+        <div class="carousel-item active">
+            <img src="{{asset('assets/images/1.jpg')}}" class="d-block w-100" alt="...">
+        </div>
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">
