@@ -141,6 +141,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('edit-reparacao/{id}',[ReparacaoController::class,'edit']);
     Route::put('update-reparacao/{id}',[ReparacaoController::class,'update']);
     Route::get('delete-reparacao/{id}',[ReparacaoController::class, 'destroy']);
+    Route::get('em-reparacaos', 'Admin\ReparacaoController@emreparacao');
 
     Route::get('add-user', 'Admin\UserController@add');
     Route::post('insert-user', 'Admin\UserController@insert');

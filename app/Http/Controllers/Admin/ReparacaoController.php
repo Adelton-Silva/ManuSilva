@@ -15,6 +15,12 @@ class ReparacaoController extends Controller
         $reparacao = Reparacao::all(); 
         return view('admin.reparacao.index', compact('reparacao')); 
     }
+    public function emreparacao()
+    {
+        $emreparacao = Reparacao::all(); 
+        return view('admin.reparacao.emreparacao', compact('emreparacao')); 
+    }
+
 
     public function add()
     {

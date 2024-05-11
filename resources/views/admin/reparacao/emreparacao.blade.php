@@ -4,6 +4,9 @@
 <div class="card">
     <div class="card-header bg-primary">
         <h4 class="text-white">Lista de Reparações</h4>
+        <div class="col-lg-12" style="text-align: right;">
+        <a href="{{ url('add-reparacao')}}" class="btn btn-danger btn-sm"><i class="fa fa-plus"></i> Adicionar</a>
+        </div>
     </div>
     <div class="table-responsive">
     <div class="card-body">
@@ -22,8 +25,8 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($reparacao as $item)
-                @if($item->estado == "Teste Final")
+                @foreach($emreparacao as $item)
+                @if($item->estado != "Teste Final")
                 <tr>
                     <td style="text-align:center">{{$item->id}}</td>
                     <td style="text-align:center">{{$item->carregador->marca}},&nbsp; &nbsp;{{$item->carregador->num_serie}}</td>
@@ -36,7 +39,6 @@
                     <td style="text-align:center">
                         <a href="{{ url('edit-reparacao/'.$item->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
                         <a href="{{ url('delete-reparacao/'.$item->id)}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Eliminar</a>
-                        <a href="{{ url('edit-reparacao/'.$item->id)}}" class="btn btn-succes btn-sm"><i class="fa fa-money"></i> Faturar</a>
                     </td>
                     
                 </tr>

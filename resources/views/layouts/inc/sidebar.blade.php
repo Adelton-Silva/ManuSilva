@@ -38,7 +38,8 @@
                     </li>
 		            </ul>
 	        </li>
-            <li class="nav-item has-submenu {{ (Request::is('carregadores') or Request::is('add-carregador') or Request::is('reparacaos') or Request::is('add-reparacao')) ? 'active' : '' }}" >
+            <li class="nav-item has-submenu {{ (Request::is('carregadores') or Request::is('add-carregador') 
+                or Request::is('reparacaos') or Request::is('add-reparacao') or Request::is('em-reparacaos')) ? 'active' : '' }}" >
 		        <a class="nav-link" href="#"> 
                     <i class="material-icons">ev_station</i>
                     <p class="sidebar-normal">Carregadores</p>
@@ -58,8 +59,14 @@
                     </li>
                     <li class="nav-item {{ Request::is('reparacaos') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ url('reparacaos') }}">
+                            <i class="material-icons">money</i>
+                            <span class="sidebar-normal">Faturar Reparação</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ Request::is('em-reparacaos') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ url('em-reparacaos') }}">
                             <i class="material-icons">settings</i>
-                            <span class="sidebar-normal">Reparação</span>
+                            <span class="sidebar-normal">Em Reparação</span>
                         </a>
                     </li>
                     <li class="nav-item {{ Request::is('add-reparacao') ? 'active' : '' }}">

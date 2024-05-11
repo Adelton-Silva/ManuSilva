@@ -42,6 +42,10 @@ class LoginController extends Controller
         {
             return redirect('tecnico');
         }
+        elseif(Auth::user()->role_as == '3') // Tecnico Login
+        {
+            return redirect('category');
+        }
         else{
             return redirect('my-orders')->with('status', "Pedido não pode ser cancelado porque já foi finalizado!");
         }
