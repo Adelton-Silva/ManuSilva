@@ -83,8 +83,13 @@ Route::middleware(['auth'])->group(function(){
     Route::put('update-tecnico/{id}',[TecnicoController::class,'update']);
     Route::get('add-tecnico', 'Frontend\TecnicoController@add');
     Route::post('insert-tecnico', 'Frontend\TecnicoController@insert');
-   
-   
+    
+    Route::get('teccarregadores', 'Frontend\TECCarregadorController@index');
+    Route::get('tecadd-carregador', 'Frontend\TECCarregadorController@add');
+    Route::post('tecinsert-carregador', 'Frontend\TECCarregadorController@insert');
+    Route::get('tecedit-carregador/{id}','Frontend\TECCarregadorController@edit');
+    Route::put('tecupdate-carregador/{id}','Frontend\TECCarregadorController@update');
+
 });
 
 Route::middleware(['auth', 'isAdmin'])->group(function () {
@@ -137,5 +142,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::put('update-reparacao/{id}',[ReparacaoController::class,'update']);
     Route::get('delete-reparacao/{id}',[ReparacaoController::class, 'destroy']);
 
+    Route::get('add-user', 'Admin\UserController@add');
+    Route::post('insert-user', 'Admin\UserController@insert');
     
 });

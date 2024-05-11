@@ -29,6 +29,7 @@
             </thead>
             <tbody>
                 @foreach($tecnico as $item)
+                @if($item->estado != "Teste Final")
                 <tr>
                     <td style="text-align:center">{{$item->id}}</td>
                     <td style="text-align:center">{{$item->carregador->marca}},&nbsp; &nbsp;{{$item->carregador->num_serie}}</td>
@@ -37,10 +38,11 @@
                     <td style="text-align:center">{{$item->material_gasto}}</td>
                     <td style="text-align:center">{{$item->tempo_gasto}}</td>
                     <td style="text-align:center">{{$item->estado}}</td>
-                    <td style="text-align:center">{{$item->data_saida}}</td>
+                    <td style="text-align:center">{{$item->data_saida}}</td> 
                     <td style="text-align:center">
                         <a href="{{ url('edit-tecnico/'.$item->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
                 </tr>
+                @endif
                 @endforeach
             </tbody>
         </table>

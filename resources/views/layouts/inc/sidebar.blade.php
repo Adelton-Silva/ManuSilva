@@ -70,42 +70,26 @@
                     </li>
 		            </ul>
 	        </li>
-            <li class="nav-item {{ Request::is('categories') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ url('categories') }}">
-                    <i class="material-icons">content_paste</i>
-                    <p class="sidebar-normal">Categoria</p>
-                </a>
-            </li>
-            <li class="nav-item {{ Request::is('add-category') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ url('add-category') }}">
-                    <i class="material-icons">playlist_add</i>
-                    <span class="sidebar-normal">Adicionar Categoria</span>
-                </a>
-            </li>
-            <li class="nav-item {{ Request::is('services') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ url('services') }}">
-                    <i class="material-icons">content_paste</i>
-                    <span class="sidebar-normal">Serviços</span>
-                </a>
-            </li>
-            <li class="nav-item {{ Request::is('add-services') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ url('add-services') }}">
-                    <i class="material-icons">playlist_add</i>
-                    <span class="sidebar-normal">Adicionar Serviço</span>
-                </a>
-            </li>
-            <li class="nav-item {{ Request::is('orders') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ url('orders') }}">
-                    <i class="material-icons">content_paste</i>
-                    <p>Encomendas</p>
-                </a>
-            </li>
-            <li class="nav-item {{ Request::is('users') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ url('users') }}">
+            <li class="nav-item has-submenu {{ (Request::is('users') or Request::is('add-user') ) ? 'active' : '' }}" >
+		        <a class="nav-link" href="#"> 
                     <i class="material-icons">persons</i>
-                    <p>Users</p>
+                    <p class="sidebar-normal">Utilizadores</p>
                 </a>
-            </li>
+		            <ul class="submenu collapse">
+                    <li class="nav-item {{ Request::is('users') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ url('users') }}">
+                            <i class="material-icons">persons</i>
+                            <p class="sidebar-normal">Utilizadores</p>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ Request::is('add-user') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ url('add-user') }}">
+                            <i class="material-icons">add_box</i>
+                            <span class="sidebar-normal">Registar Utilizador</span>
+                        </a>
+                    </li>
+		            </ul>
+	        </li>
         </ul>
     </div>
 </div>

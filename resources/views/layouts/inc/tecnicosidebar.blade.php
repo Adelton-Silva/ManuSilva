@@ -17,14 +17,14 @@
                     <p class="sidebar-normal">Carregadores</p>
                 </a>
 		            <ul class="submenu collapse">
-                    <li class="nav-item {{ Request::is('carregadores') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ url('carregadores') }}">
+                    <!--<li class="nav-item {{ Request::is('teccarregadores') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ url('teccarregadores') }}">
                             <i class="material-icons">content_paste</i>
                             <p class="sidebar-normal">Listar Carrgadores</p>
                         </a>
-                    </li>
-                    <li class="nav-item {{ Request::is('add-carregador') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ url('add-carregador') }}">
+                    </li>-->
+                    <li class="nav-item {{ Request::is('tecadd-carregador') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ url('tecadd-carregador') }}">
                             <i class="material-icons">add_box</i>
                             <span class="sidebar-normal">Adicionar Carregador</span>
                         </a>
@@ -35,12 +35,12 @@
                             <span class="sidebar-normal">Reparação</span>
                         </a>
                     </li>
-                    <li class="nav-item {{ Request::is('add-tecnico') ? 'active' : '' }}">
+                    <!--<li class="nav-item {{ Request::is('add-tecnico') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ url('add-tecnico') }}">
                             <i class="material-icons">add_box</i>
                             <span class="sidebar-normal">Adicionar Reparação</span>
                         </a>
-                    </li>
+                    </li>-->
 		            </ul>
 	        </li>
         </ul>
