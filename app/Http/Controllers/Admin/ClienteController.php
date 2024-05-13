@@ -30,9 +30,14 @@ class ClienteController extends Controller
         $cliente = new Cliente();
 
         $cliente->name = $request->input('name');
+        $cliente->name_cont = $request->input('name_cont');
         $cliente->telefone = $request->input('telefone');
+        $cliente->telemovel = $request->input('telemovel');
         $cliente->email = $request->input('email');
         $cliente->morada = $request->input('morada');
+        $cliente->cod_pos = $request->input('cod_pos');
+        $cliente->localidade = $request->input('localidade');
+        $cliente->pais = $request->input('pais');
         $cliente->save();
         return redirect('/clientes')->with('status',"Cliente adicionada com sucesso!");
     }

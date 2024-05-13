@@ -11,10 +11,15 @@
             <thead>
                 <tr>
                     <th style="text-align:center">Id</th>
-                    <th style="text-align:center">Nome</th>
+                    <th style="text-align:center">Nome Empresa</th>
+                    <th style="text-align:center">Nome de Contacto</th>
                     <th style="text-align:center">Telefone</th>
+                    <th style="text-align:center">Telemóvel</th>
                     <th style="text-align:center">email</th>
                     <th style="text-align:center">Morada</th>
+                    <th style="text-align:center">Código Postal</th>
+                    <th style="text-align:center">Localidade</th>
+                    <th style="text-align:center">País</th>
                     <th style="text-align:center">Ação</th>
                 </tr>
             </thead>
@@ -23,9 +28,14 @@
                 <tr>
                     <td style="text-align:center">{{$item->id}}</td>
                     <td style="text-align:center">{{$item->name}}</td>
+                    <td style="text-align:center">{{$item->name_cont}}</td>
                     <td style="text-align:center">{{$item->telefone}}</td>
+                    <td style="text-align:center">{{$item->telemovel}}</td>
                     <td style="text-align:center">{{$item->email}}</td>
                     <td style="text-align:center">{{$item->morada}}</td>
+                    <td style="text-align:center">{{$item->cod_pos}}</td>
+                    <td style="text-align:center">{{$item->localidade}}</td>
+                    <td style="text-align:center">{{$item->pais}}</td>
                     <td style="text-align:center">
                         <a href="{{ url('edit-cliente/'.$item->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
                         <a href="{{ url('delete-cliente/'.$item->id)}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Eliminar</a>

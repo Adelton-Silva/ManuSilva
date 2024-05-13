@@ -11,12 +11,20 @@
             @method('PUT')
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label for="">Nome</label>
+                    <label for="">Nome Empresa</label>
                     <input type="text" value="{{$cliente->name}}" class="form-control" name="name">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="">Nome de Contacto</label>
+                    <input type="text" value="{{$cliente->name_cont}}" class="form-control" name="name_cont">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Telefone</label>
                     <input type="text" value="{{$cliente->telefone}}" class="form-control" name="telefone">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="">Telemóvel</label>
+                    <input type="text" value="{{$cliente->telemovel}}" class="form-control" name="telemovel">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Email</label>
@@ -25,6 +33,18 @@
                 <div class="col-md-6 mb-3">
                     <label for="">Morada</label>
                     <input type="text" value="{{$cliente->morada}}" class="form-control" name="morada">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="">Código Postal</label>
+                    <input type="text" value="{{$cliente->cod_pos}}" class="form-control" name="cod_pos">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="">Localidade</label>
+                    <input type="text" value="{{$cliente->localidade}}" class="form-control" name="pais">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="">País</label>
+                    <input type="text" value="{{$cliente->pais}}" class="form-control" name="pais">
                 </div>
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary">Guardar</button>
