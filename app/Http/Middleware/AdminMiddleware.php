@@ -30,7 +30,7 @@ class AdminMiddleware
         }
         else
         {
-            return redirect('/login')->with('status','Please Login First');
+            return redirect('/login')->with('status','Faça o login');
         }
     }
 }

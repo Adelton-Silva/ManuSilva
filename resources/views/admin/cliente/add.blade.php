@@ -10,6 +10,10 @@
             @csrf
             <div class="row">
                 <div class="col-md-6 mb-3">
+                    <label for="">NIF</label>
+                    <input type="number" class="form-control" name="nif">
+                </div>
+                <div class="col-md-6 mb-3">
                     <label for="">Nome Empresa</label>
                     <input type="text" class="form-control" name="name" required="true">
                 </div>
@@ -23,7 +27,7 @@
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Telemóvel</label>
-                    <input type="text" class="form-control" name="telemovel" required="true">
+                    <input type="text" class="form-control" name="telemovel" >
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Email</label>
@@ -35,15 +39,15 @@
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Código Postal</label>
-                    <input type="text" class="form-control" name="cod_pos" required="true">
+                    <input type="text" class="form-control" name="cod_pos">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Localidade</label>
-                    <input type="text" class="form-control" name="localidade" required="true">
+                    <input type="text" class="form-control" name="localidade">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">País</label>
-                    <input type="text" class="form-control" name="pais" required="true">
+                    <input type="text" class="form-control" name="pais">
                 </div>
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary">Adicionar</button>

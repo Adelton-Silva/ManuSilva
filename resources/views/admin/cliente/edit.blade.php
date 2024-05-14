@@ -11,6 +11,10 @@
             @method('PUT')
             <div class="row">
                 <div class="col-md-6 mb-3">
+                    <label for="">NIF</label>
+                    <input type="number" value="{{$cliente->nif}}" class="form-control" name="nif">
+                </div>
+                <div class="col-md-6 mb-3">
                     <label for="">Nome Empresa</label>
                     <input type="text" value="{{$cliente->name}}" class="form-control" name="name">
                 </div>
@@ -40,7 +44,7 @@
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Localidade</label>
-                    <input type="text" value="{{$cliente->localidade}}" class="form-control" name="pais">
+                    <input type="text" value="{{$cliente->localidade}}" class="form-control" name="localidade">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">País</label>

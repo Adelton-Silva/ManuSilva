@@ -5,7 +5,7 @@
     <div class="card-header bg-primary">
         <h4 class="text-white">Lista de Reparações</h4>
         <div class="col-lg-12" style="text-align: right;">
-        <a href="{{ url('add-reparacao')}}" class="btn btn-danger btn-sm"><i class="fa fa-plus"></i> Adicionar</a>
+        <a href="{{ url('add-reparacao')}}" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Adicionar</a>
         </div>
     </div>
     <div class="table-responsive">

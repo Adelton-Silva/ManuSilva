@@ -28,7 +28,7 @@ class ClienteController extends Controller
     public function insert(Request $request)
     {
         $cliente = new Cliente();
-
+        $cliente->nif = $request->input('nif');
         $cliente->name = $request->input('name');
         $cliente->name_cont = $request->input('name_cont');
         $cliente->telefone = $request->input('telefone');
@@ -50,10 +50,16 @@ class ClienteController extends Controller
     public function update(Request $request, $id)
     {
         $cliente = Cliente::find($id);
+        $cliente->nif = $request->input('nif');
         $cliente->name = $request->input('name');
+        $cliente->name_cont = $request->input('name_cont');
         $cliente->telefone = $request->input('telefone');
+        $cliente->telemovel = $request->input('telemovel');
         $cliente->email = $request->input('email');
         $cliente->morada = $request->input('morada');
+        $cliente->cod_pos = $request->input('cod_pos');
+        $cliente->localidade = $request->input('localidade');
+        $cliente->pais = $request->input('pais');
         $cliente->update();
         return redirect('/clientes')->with('status',"Cliente atualizado com sucesso!");
     }

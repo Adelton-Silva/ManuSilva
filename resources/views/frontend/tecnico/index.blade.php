@@ -8,7 +8,7 @@
         <h4 class="text-white">Lista de Caregadores para Reparações</h4>
     </div>
         <div class="col-lg-12" style="text-align: right;">
-        <a href="{{ url('add-tecnico')}}" class="btn btn-danger btn-sm"><i class="fa fa-plus"></i> Adicionar</a>
+        <a href="{{ url('add-tecnico')}}" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Adicionar</a>
         </div>
     </div>
     <div class="table-responsive">
