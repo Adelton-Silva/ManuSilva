@@ -45,7 +45,7 @@ class ProfileController extends Controller
     public function editec($id)
     {
         $user = User::find($id);
-        return view('auth.edit', compact('user')); 
+        return view('auth.editec', compact('user')); 
     }
     public function updatec(Request $request, $id)
     {
