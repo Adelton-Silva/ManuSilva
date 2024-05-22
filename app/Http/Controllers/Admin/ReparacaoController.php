@@ -43,6 +43,7 @@ class ReparacaoController extends Controller
             {
                 $reparacao->data_saida = "Em atividade";
             }
+        $reparacao->estado_faturacao = "Não Faturado";
         $reparacao->save();
         return redirect('reparacaos')->with('status',"As reparações feitas foram adicionado com sucesso!");
     }
@@ -75,6 +76,18 @@ class ReparacaoController extends Controller
         $reparacao = Reparacao::find($id);
         $reparacao->delete();
         return redirect('reparacaos')->with('status',"Dados da reparação eliminado com sucesso!"); 
+    }
+    public function edit_faturar($id)
+    {
+        $reparacao = Reparacao::find($id);
+        return view('admin.reparacao.faturar', compact('reparacao'));
+    }
+    public function faturar(Request $request, $id)
+    {
+        $reparacao = Reparacao::find($id);
+        $reparacao->estado_faturacao = "Faturado";
+        $reparacao->update();
+        return redirect('reparacaos')->with('status',"Dados da reparação atualizado com sucesso!"); 
     }
 
 }

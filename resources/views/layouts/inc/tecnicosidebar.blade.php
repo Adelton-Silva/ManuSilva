@@ -6,12 +6,12 @@
       Tip 2: you can also add an image using data-image tag-->
     <div class="logo">
         <a href="#" class="simple-text logo-normal">
-            Home Service
+            
         </a>
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">
-            <li class="nav-item has-submenu {{ (Request::is('carregadores') or Request::is('add-carregador') or Request::is('reparacaos') or Request::is('add-reparacao')) ? 'active' : '' }}" >
+            <li class="nav-item has-submenu {{ (Request::is('tecadd-carregador') or Request::is('tecnico') or Request::is('reparacaos') or Request::is('add-reparacao')) ? 'active' : '' }}" >
 		        <a class="nav-link" href="#"> 
                     <i class="material-icons">ev_station</i>
                     <p class="sidebar-normal">Carregadores</p>

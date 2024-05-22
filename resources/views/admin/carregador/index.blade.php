@@ -3,10 +3,10 @@
 @section('content')
 <div class="card">
     <div class="card-header bg-primary">
-        <h4 class="text-white">Todos os Carregadores</h4>
-        <div class="col-lg-12" style="text-align: right;">
-            <a href="{{ url('add-carregador')}}" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Adicionar</a>
-        </div>
+        <h4 class="text-white">Todos os Carregadores
+        <a href="{{ url('add-carregador')}}" class="btn btn-sm btn-success float-right"><i
+                                    class="fas fa-plus fa-sm text-white-50"></i> Adicionar</a>
+        </h4>
     </div>
     <div class="table-responsive">
     <div class="card-body">

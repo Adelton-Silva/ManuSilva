@@ -17,6 +17,7 @@ class reparacao extends Model
         'tempo_gasto',
         'estado',
         'data_saida',
+        'estado_faturacao',
     ];
 
     public function carregador()

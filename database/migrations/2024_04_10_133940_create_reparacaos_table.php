@@ -22,6 +22,7 @@ return new class extends Migration
             $table->longText('tempo_gasto');
             $table->longText('estado');
             $table->string('data_saida');
+            $table->string('estado_faturacao');
             $table->timestamps(); 
         });
     }

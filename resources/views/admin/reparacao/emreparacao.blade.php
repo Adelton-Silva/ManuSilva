@@ -3,10 +3,10 @@
 @section('content')
 <div class="card">
     <div class="card-header bg-primary">
-        <h4 class="text-white">Lista de Reparações</h4>
-        <div class="col-lg-12" style="text-align: right;">
-        <a href="{{ url('add-reparacao')}}" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Adicionar</a>
-        </div>
+        <h4 class="text-white">Lista de Reparações
+         <a href="{{ url('add-reparacao')}}" class="btn btn-sm btn-success float-right"><i
+                                    class="fas fa-plus fa-sm text-white-50"></i> Adicionar</a>
+        </h4>
     </div>
     <div class="table-responsive">
     <div class="card-body">
@@ -21,6 +21,7 @@
                     <th style="text-align:center">Tempo Gasto</th>
                     <th style="text-align:center">Estado</th>
                     <th style="text-align:center">Data Saída</th>
+                    <th style="text-align:center">Cliente</th>
                     <th style="text-align:center">Ação</th>
                 </tr>
             </thead>
@@ -36,6 +37,7 @@
                     <td style="text-align:center">{{$item->tempo_gasto}}</td>
                     <td style="text-align:center">{{$item->estado}}</td>
                     <td style="text-align:center">{{$item->data_saida}}</td>
+                    <td style="text-align:center">{{$item->carregador->cliente->name}}</td>
                     <td style="text-align:center">
                         <a href="{{ url('edit-reparacao/'.$item->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
                         <a href="{{ url('delete-reparacao/'.$item->id)}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Eliminar</a>

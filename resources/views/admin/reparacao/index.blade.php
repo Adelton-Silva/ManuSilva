@@ -18,6 +18,8 @@
                     <th style="text-align:center">Tempo Gasto</th>
                     <th style="text-align:center">Estado</th>
                     <th style="text-align:center">Data Saída</th>
+                    <th style="text-align:center">Cliente</th>
+                    <th style="text-align:center">Estado de Faturação</th>
                     <th style="text-align:center">Ação</th>
                 </tr>
             </thead>
@@ -33,10 +35,14 @@
                     <td style="text-align:center">{{$item->tempo_gasto}}</td>
                     <td style="text-align:center">{{$item->estado}}</td>
                     <td style="text-align:center">{{$item->data_saida}}</td>
+                    <td style="text-align:center">{{$item->carregador->cliente->name}}</td>
+                    <td style="text-align:center">{{$item->estado_faturacao}}</td>
                     <td style="text-align:center">
                         <a href="{{ url('edit-reparacao/'.$item->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
                         <a href="{{ url('delete-reparacao/'.$item->id)}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Eliminar</a>
-                        <a href="{{ url('edit-reparacao/'.$item->id)}}" class="btn btn-succes btn-sm"><i class="fa fa-money"></i> Faturar</a>
+                        @if($item->estado_faturacao == "Não Faturado")
+                        <a href="{{ url('edit_faturar/'.$item->id)}}" class="btn btn-succes btn-sm"><i class="fa fa-money"></i> Faturar</a>
+                        @endif
                     </td>
                     
                 </tr>
