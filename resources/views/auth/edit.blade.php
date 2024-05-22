@@ -1,4 +1,4 @@
-@extends('layouts.inc.tecnico')
+@extends('layouts.admin')
 
 @section('content')
 <div class="card">
@@ -6,7 +6,9 @@
         <h4>Profile</h4>
     </div>
     <div class="card-body">
-    <form action="" method="GET" enctype="multipart/form-data">
+        <form action="{{ url('update-profile/'.$user->id)}}" method="POST" enctype="multipart/form-data">
+            @method('PUT')
+            @csrf
             <div class="row">
             <div class="col-md-12 mb-3">
                 <label for="">Role</label>
@@ -20,46 +22,46 @@
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Nome</label>
-                    <input type="text" value="{{Auth::user()->name}}" class="form-control" name="name">
+                    <input type="text" value="{{$user->name}}" class="form-control" name="name">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Apelido</label>
-                    <input type="text" value="{{Auth::user()->lname}}" class="form-control" name="lname">
+                    <input type="text" value="{{$user->lname}}" class="form-control" name="lname">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Email</label>
-                    <input type="email" value="{{Auth::user()->email}}" class="form-control" name="email">
+                    <input type="email" value="{{$user->email}}" class="form-control" name="email">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Telefone</label>
-                    <input type="text" value="{{Auth::user()->telefone}}" class="form-control" name="telefone">
+                    <input type="text" value="{{$user->telefone}}" class="form-control" name="telefone">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Morada</label>
-                    <input type="text" value="{{Auth::user()->morada}}" class="form-control" name="morada">
+                    <input type="text" value="{{$user->morada}}" class="form-control" name="morada">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Código Postal</label>
-                    <input type="text" value="{{Auth::user()->cod_pos}}" class="form-control" name="cod_pos">
+                    <input type="text" value="{{$user->cod_pos}}" class="form-control" name="cod_pos">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Cidade</label>
-                    <input type="text" value="{{Auth::user()->cidade}}" class="form-control" name="cidade">
+                    <input type="text" value="{{$user->cidade}}" class="form-control" name="cidade">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Destrito</label>
-                    <input type="text" value="{{Auth::user()->destrito}}" class="form-control" name="destrito">
+                    <input type="text" value="{{$user->destrito}}" class="form-control" name="destrito">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">País</label>
-                    <input type="text" value="{{Auth::user()->pais}}" class="form-control" name="pais">
+                    <input type="text" value="{{$user->pais}}" class="form-control" name="pais">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Palavra Passe</label>
                     <input type="text" value="" class="form-control" name="password">
                 </div>
                 <div class="col-md-12">
-                <a href="{{ url('edit-profiletec/'.Auth::user()->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
+                    <button type="submit" class="btn btn-primary">Atualizar</button>
                 </div>
             </div>
         </form>

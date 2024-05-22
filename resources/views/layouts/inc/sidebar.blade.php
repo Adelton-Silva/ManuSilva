@@ -56,24 +56,10 @@
 		            </ul>
 	        </li>
             <li class="nav-item has-submenu {{ (Request::is('users') or Request::is('add-user') ) ? 'active' : '' }}" >
-		        <a class="nav-link" href="#"> 
+		        <a class="nav-link" href="{{ url('users') }}"> 
                     <i class="material-icons">persons</i>
                     <p class="sidebar-normal">Utilizadores</p>
                 </a>
-		            <ul class="submenu collapse">
-                    <li class="nav-item {{ Request::is('users') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ url('users') }}">
-                            <i class="material-icons">persons</i>
-                            <p class="sidebar-normal">Utilizadores</p>
-                        </a>
-                    </li>
-                    <li class="nav-item {{ Request::is('add-user') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ url('add-user') }}">
-                            <i class="material-icons">add_box</i>
-                            <span class="sidebar-normal">Registar Utilizador</span>
-                        </a>
-                    </li>
-		            </ul>
 	        </li>
         </ul>
     </div>

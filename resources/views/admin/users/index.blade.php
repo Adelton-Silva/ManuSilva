@@ -3,7 +3,10 @@
 @section('content')
 <div class="card">
     <div class="card-header bg-primary">
-        <h4 class="text-white">Users registados</h4>
+        <h4 class="text-white">Utilizadores registados
+        <a href="{{ url('add-user')}}" class="btn btn-sm btn-success float-right"><i
+                                    class="fas fa-plus fa-sm text-white-50"></i> Registar Utilizador</a>
+                                    </h4>
     </div>
     <div class="table-responsive">
     <div class="card-body">
@@ -23,7 +26,7 @@
                     <td style="text-align:center">{{$item->id}}</td>
                     <td style="text-align:center">{{$item->name.' '.$item->lname}}</td>
                     <td>{{$item->email}}</td>
-                    <td style="text-align:center">{{$item->phone}}</td>                  
+                    <td style="text-align:center">{{$item->telefone}}</td>                  
                     <td style="text-align:center">
                         <a href="{{ url('view-user/'.$item->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i> Ver</a>
                     </td>

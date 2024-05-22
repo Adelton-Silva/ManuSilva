@@ -93,6 +93,10 @@ Route::middleware(['auth'])->group(function(){
 
     Route::get('profile',[ProfileController::class,'index']);
     Route::get('profiletec',[ProfileController::class,'indextec']);
+    Route::get('edit-profile/{id}',[ProfileController::class,'edit']);
+    Route::put('update-profile/{id}',[ProfileController::class,'update']);
+    Route::get('edit-profiletec/{id}',[ProfileController::class,'editec']);
+    Route::put('update-profiletec/{id}',[ProfileController::class,'updatec']);
 
 });
 
