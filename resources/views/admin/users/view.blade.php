@@ -3,7 +3,7 @@
 @section('content')
             <div class="card">
                 <div class="card-header bg-primary">
-                    <h4 class="text-white">Detalhes de users
+                    <h4 class="text-white">Detalhes de Utilizador
                         <a href="{{ url('users') }}" class="btn btn-primary btn-sm float-right">Voltar</a>
                     </h4>
                 </div>
