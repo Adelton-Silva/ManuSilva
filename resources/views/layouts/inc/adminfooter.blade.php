@@ -3,12 +3,7 @@
     <nav class="float-left">
       <ul>
         <li>
-          <a href="/">
-              {{ __('Home-service') }}
-          </a>
-        </li>
-        <li>
-          <a href="https://creative-tim.com/presentation">
+          <a href="#">
               {{ __('Sobre Nós') }}
           </a>
         </li>
@@ -18,7 +13,7 @@
       &copy;
       <script>
         document.write(new Date().getFullYear())
-      </script>, UNICV <i class="material-icons">favorite</i> by
+      </script><i class="material-icons">favorite</i> by
       <a href="#" target="_blank">Adelton Nair Vaz da Silva</a>.
     </div>
   </div>
