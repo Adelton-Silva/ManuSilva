@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\ClienteController;
 use App\Http\Controllers\Admin\CarregadorController;
 use App\Http\Controllers\Admin\ReparacaoController;
 use App\Http\Controllers\Frontend\TecnicoController;
+use App\Http\Controllers\Auth\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -89,6 +90,9 @@ Route::middleware(['auth'])->group(function(){
     Route::post('tecinsert-carregador', 'Frontend\TECCarregadorController@insert');
     Route::get('tecedit-carregador/{id}','Frontend\TECCarregadorController@edit');
     Route::put('tecupdate-carregador/{id}','Frontend\TECCarregadorController@update');
+
+    Route::get('profile',[ProfileController::class,'index']);
+    Route::get('profiletec',[ProfileController::class,'indextec']);
 
 });
 
