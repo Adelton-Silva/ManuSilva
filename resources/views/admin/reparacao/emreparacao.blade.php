@@ -14,14 +14,14 @@
             <thead>
                 <tr>
                     <th style="text-align:center">Id</th>
+                    <th style="text-align:center">Cliente</th>
                     <th style="text-align:center">Carregador</th>
-                    <th style="text-align:center">Técnico</th>
+                    <th style="text-align:center">Técnico que Registou</th>
                     <th style="text-align:center">Relatório Atividade</th>
                     <th style="text-align:center">Material Gasto</th>
                     <th style="text-align:center">Tempo Gasto</th>
                     <th style="text-align:center">Estado</th>
                     <th style="text-align:center">Data Saída</th>
-                    <th style="text-align:center">Cliente</th>
                     <th style="text-align:center">Ação</th>
                 </tr>
             </thead>
@@ -30,6 +30,7 @@
                 @if($item->estado != "Teste Final")
                 <tr>
                     <td style="text-align:center">{{$item->id}}</td>
+                    <td style="text-align:center">{{$item->carregador->cliente->name}}</td>
                     <td style="text-align:center">{{$item->carregador->marca}},&nbsp; &nbsp;{{$item->carregador->num_serie}}</td>
                     <td style="text-align:center">{{$item->user->name}}</td>
                     <td style="text-align:center">{{$item->relatorio_ativi}}</td>
@@ -37,10 +38,10 @@
                     <td style="text-align:center">{{$item->tempo_gasto}}</td>
                     <td style="text-align:center">{{$item->estado}}</td>
                     <td style="text-align:center">{{$item->data_saida}}</td>
-                    <td style="text-align:center">{{$item->carregador->cliente->name}}</td>
                     <td style="text-align:center">
                         <a href="{{ url('edit-reparacao/'.$item->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
                         <a href="{{ url('delete-reparacao/'.$item->id)}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Eliminar</a>
+                        <a href="{{ url('obra/'.$item->id)}}" class="btn btn-info btn-sm"><i class="fa fa-eye"></i> Ver Folha de Obra</a>
                     </td>
                     
                 </tr>

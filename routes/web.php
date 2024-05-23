@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\CarregadorController;
 use App\Http\Controllers\Admin\ReparacaoController;
 use App\Http\Controllers\Frontend\TecnicoController;
 use App\Http\Controllers\Auth\ProfileController;
+use App\Http\Controllers\Admin\FolhadeObrareparacaoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -97,6 +98,8 @@ Route::middleware(['auth'])->group(function(){
     Route::put('update-profile/{id}',[ProfileController::class,'update']);
     Route::get('edit-profiletec/{id}',[ProfileController::class,'editec']);
     Route::put('update-profiletec/{id}',[ProfileController::class,'updatec']);
+
+    Route::get('obra/{id}',[FolhadeObrareparacaoController::class,'index']);
 
 });
 
