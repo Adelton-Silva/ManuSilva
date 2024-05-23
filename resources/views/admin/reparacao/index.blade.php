@@ -14,7 +14,6 @@
                     <th style="text-align:center">Carregador</th>
                     <th style="text-align:center">Técnico</th>
                     <th style="text-align:center">Relatório Atividade</th>
-                    <th style="text-align:center">Material Gasto</th>
                     <th style="text-align:center">Tempo Gasto</th>
                     <th style="text-align:center">Estado</th>
                     <th style="text-align:center">Data Saída</th>
@@ -32,7 +31,6 @@
                     <td style="text-align:center">{{$item->user->name}}</td>
                     <td style="text-align:center">{{$item->relatorio_ativi}}</td>
                     <td style="text-align:center">{{$item->material_gasto}}</td>
-                    <td style="text-align:center">{{$item->tempo_gasto}}</td>
                     <td style="text-align:center">{{$item->estado}}</td>
                     <td style="text-align:center">{{$item->data_saida}}</td>
                     <td style="text-align:center">{{$item->carregador->cliente->name}}</td>
@@ -40,6 +38,7 @@
                     <td style="text-align:center">
                         <a href="{{ url('edit-reparacao/'.$item->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
                         <a href="{{ url('delete-reparacao/'.$item->id)}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Eliminar</a>
+                        <a href="{{ url('obra/'.$item->id)}}" class="btn btn-info btn-sm"><i class="fa fa-eye"></i> Ver Folha de Obra</a>
                         @if($item->estado_faturacao == "Não Faturado")
                         <a href="{{ url('edit_faturar/'.$item->id)}}" class="btn btn-succes btn-sm"><i class="fa fa-money"></i> Faturar</a>
                         @endif

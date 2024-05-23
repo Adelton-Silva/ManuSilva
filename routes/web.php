@@ -100,6 +100,9 @@ Route::middleware(['auth'])->group(function(){
     Route::put('update-profiletec/{id}',[ProfileController::class,'updatec']);
 
     Route::get('obra/{id}',[FolhadeObrareparacaoController::class,'index']);
+    Route::get('add-obra', 'Admin\FolhadeObrareparacaoController@add');
+    Route::post('insert-obra', 'Admin\FolhadeObrareparacaoController@insert');
+    Route::get('delete-obra/{id}',[FolhadeObrareparacaoController::class, 'destroy']);
 
 });
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Reparacao;
+use App\Models\FolhadeObrareparacao;
 use App\Models\Carregador;
 use Illuminate\Support\Facades\Auth;
 

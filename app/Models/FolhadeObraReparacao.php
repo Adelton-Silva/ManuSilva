@@ -14,11 +14,16 @@ class FolhadeObraReparacao extends Model
         'data_intervencao',
         'material_gasto',
         'horas',
+        'total_horas',
         'relizado_por',
     ];
 
     public function cliente()
     {
         return $this->belongsTo(Reparacao::class,'repara_id','id');
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class,'relizado_por','id');
     }
 }

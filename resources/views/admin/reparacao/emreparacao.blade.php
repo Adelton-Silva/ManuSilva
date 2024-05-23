@@ -21,7 +21,7 @@
                     <th style="text-align:center">Material Gasto</th>
                     <th style="text-align:center">Tempo Gasto</th>
                     <th style="text-align:center">Estado</th>
-                    <th style="text-align:center">Data Saída</th>
+                    <th style="text-align:center">Data de Conclusão</th>
                     <th style="text-align:center">Ação</th>
                 </tr>
             </thead>
