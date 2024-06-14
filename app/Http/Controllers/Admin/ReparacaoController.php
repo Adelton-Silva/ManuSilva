@@ -64,6 +64,7 @@ class ReparacaoController extends Controller
         {
             $reparacao->data_saida = "Em atividade";
         }
+        $reparacao->estado_faturacao = $request->input('estado_faturacao');
         $reparacao->update();
         return redirect('reparacaos')->with('status',"Dados da reparação atualizado com sucesso!"); 
     }

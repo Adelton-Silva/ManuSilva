@@ -4,7 +4,7 @@
 <div class="card">
     <div class="card-header bg-primary">
         <h4 class="text-white">Folha de Obra
-        <a href="{{ url('add-obra')}}" class="btn btn-sm btn-success float-right"><i
+        <a href="{{ url('add-obra/')}}" class="btn btn-sm btn-success float-right"><i
                                     class="fas fa-plus fa-sm text-white-50"></i> Adicionar</a>
         </h4>
     </div>
@@ -41,6 +41,7 @@
         <div class="col-md-1 mb-3">
         <label for="">Total Hora: </label>
         <label for="">{{$total}}</label>
+        <label for="">{{$main_Id}}</label>
         </div>
     </div>
     </div>
