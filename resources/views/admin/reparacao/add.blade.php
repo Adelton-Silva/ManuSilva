@@ -19,18 +19,6 @@
                     </select>
                 </div>
                 <div class="col-md-12 mb-3">
-                    <label for="">Relatório Atividade</label>
-                    <textarea name="relatorio_ativi" rows="3" class="form-control" required="true"></textarea>
-                </div>
-                <div class="col-md-12 mb-3">
-                    <label for="">Material Gasto</label>
-                    <textarea name="material_gasto" rows="3" class="form-control" required="true"></textarea>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="">Tempo Gasto</label>
-                    <input type="time" class="form-control" name="tempo_gasto" required="true">
-                </div>
-                <div class="col-md-12 mb-3">
                     <label for="">Estado</label>
                     <select class="form-select" name="estado" required="true">                   
                         <option value="">Selecione o Estado</option>     

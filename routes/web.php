@@ -16,6 +16,7 @@ use App\Http\Controllers\Frontend\WishlistController;
 use App\Http\Controllers\Admin\ClienteController;
 use App\Http\Controllers\Admin\CarregadorController;
 use App\Http\Controllers\Admin\ReparacaoController;
+use App\Http\Controllers\Admin\EmReparacaoController;
 use App\Http\Controllers\Frontend\TecnicoController;
 use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\Admin\FolhadeObrareparacaoController;
@@ -100,9 +101,14 @@ Route::middleware(['auth'])->group(function(){
     Route::put('update-profiletec/{id}',[ProfileController::class,'updatec']);
 
     Route::get('obra/{id}',[FolhadeObrareparacaoController::class,'index']);
+    Route::get('faturarobra/{id}',[FolhadeObrareparacaoController::class,'indexfactura']);
     Route::get('add-obra', 'Admin\FolhadeObrareparacaoController@add');
     Route::post('insert-obra', 'Admin\FolhadeObrareparacaoController@insert');
     Route::get('delete-obra/{id}',[FolhadeObrareparacaoController::class, 'destroy']);
+    Route::get('edit-reparacaofat/{id}',[ReparacaoController::class,'faturar']);
+    Route::get('edit-obra/{id}',[FolhadeObrareparacaoController::class,'edit']);
+    Route::put('update-obra/{id}',[FolhadeObrareparacaoController::class,'update']);
+
 
 });
 
@@ -155,9 +161,14 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('edit-reparacao/{id}',[ReparacaoController::class,'edit']);
     Route::put('update-reparacao/{id}',[ReparacaoController::class,'update']);
     Route::get('delete-reparacao/{id}',[ReparacaoController::class, 'destroy']);
-    Route::get('em-reparacaos', 'Admin\ReparacaoController@emreparacao');
-    Route::get('edit_faturar/{id}',[ReparacaoController::class,'edit_faturar']);
-    Route::put('faturar-reparacao/{id}',[ReparacaoController::class,'faturar']);
+    Route::get('em-reparacaos', 'Admin\EmReparacaoController@emreparacao');
+    Route::get('edit_faturar/{id}',[EmReparacaoController::class,'edit_faturar']);
+    Route::put('faturar-reparacao/{id}',[EmReparacaoController::class,'faturar']);
+    Route::get('emadd-reparacao', 'Admin\EmReparacaoController@add');
+    Route::post('eminsert-reparacao', 'Admin\EmReparacaoController@insert');
+    Route::get('emdelete-reparacao/{id}',[EmReparacaoController::class, 'destroy']);
+    Route::get('emedit-reparacao/{id}',[EmReparacaoController::class,'edit']);
+    Route::put('emupdate-reparacao/{id}',[EmReparacaoController::class,'update']);
 
     Route::get('add-user', 'Admin\UserController@add');
     Route::post('insert-user', 'Admin\UserController@insert');

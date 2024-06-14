@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('data_intervencao');
             $table->string('material_gasto');
             $table->string('horas');
-            $table->bigInteger('total_horas');
             $table->bigInteger('relizado_por');
             $table->timestamps();
         });

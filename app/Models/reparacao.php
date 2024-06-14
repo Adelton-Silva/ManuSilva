@@ -12,8 +12,6 @@ class reparacao extends Model
     protected $fillable = [
         'carregador_id',
         'user_id',
-        'relatorio_ativi',
-        'material_gasto',
         'tempo_gasto',
         'estado',
         'data_saida',

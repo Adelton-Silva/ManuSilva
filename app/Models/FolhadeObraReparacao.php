@@ -14,7 +14,6 @@ class FolhadeObraReparacao extends Model
         'data_intervencao',
         'material_gasto',
         'horas',
-        'total_horas',
         'relizado_por',
     ];
 

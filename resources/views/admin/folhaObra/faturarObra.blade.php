@@ -30,7 +30,7 @@
                     <td style="text-align:center">{{$item->horas}}</td>
                     <td style="text-align:center">{{$item->user->name}}</td>
                     <td style="text-align:center">
-                        <a href="{{ url('edit-obra/'.$item->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
+                        <a href="{{ url('edit-cliente/'.$item->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
                         <a href="{{ url('delete-obra/'.$item->id)}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Eliminar</a>
                     </td>                
                 </tr>
@@ -42,6 +42,9 @@
         <label for="">Total Hora: </label>
         <label for="">{{$total}}</label>
         </div>
+        @if($item->user->role_as == 1)
+         <a href="{{ url('edit-reparacaofat/'.$item->repara_id)}}" class="btn btn-primary btn-sm"><i class="fa fa-money"> </i>  Faturar</a>
+         @endif
     </div>
     </div>
 </div>

@@ -17,8 +17,6 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('carregador_id');
             $table->bigInteger('user_id');
-            $table->string('relatorio_ativi');
-            $table->string('material_gasto');
             $table->longText('tempo_gasto');
             $table->longText('estado');
             $table->string('data_saida');

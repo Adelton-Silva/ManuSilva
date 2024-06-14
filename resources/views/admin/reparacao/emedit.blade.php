@@ -6,7 +6,7 @@
         <h4>Editar Carregador</h4>
     </div>
     <div class="card-body">
-        <form action="{{ url('update-reparacao/'.$reparacao->id)}}" method="POST" enctype="multipart/form-data">
+        <form action="{{ url('emupdate-reparacao/'.$reparacao->id)}}" method="POST" enctype="multipart/form-data">
             @method('PUT')
             @csrf
             <div class="row">

@@ -9,25 +9,18 @@ use App\Models\FolhadeObrareparacao;
 use App\Models\Carregador;
 use Illuminate\Support\Facades\Auth;
 
-class ReparacaoController extends Controller
+class EmReparacaoController extends Controller
 {
-    public function index()
-    {
-        $reparacao = Reparacao::all();
-        $tempo_total = FolhadeObrareparacao::all();
-        return view('admin.reparacao.index', compact('reparacao')); 
-    }
     public function emreparacao()
     {
         $emreparacao = Reparacao::all(); 
         return view('admin.reparacao.emreparacao', compact('emreparacao')); 
     }
 
-
     public function add()
     {
         $carregador = Carregador::all();
-        return view('admin.reparacao.add', compact('carregador'));
+        return view('admin.reparacao.emadd', compact('carregador'));
     }
 
     public function insert(Request $request)
@@ -44,13 +37,13 @@ class ReparacaoController extends Controller
             }
         $reparacao->estado_faturacao = "Não Faturado";
         $reparacao->save();
-        return redirect('reparacaos')->with('status',"Nova reparação iniciada com sucesso!");
+        return redirect('em-reparacaos')->with('status',"Nova reparação iniciada com sucesso!");
     }
 
     public function edit($id)
     {
         $reparacao = Reparacao::find($id);
-        return view('admin.reparacao.edit', compact('reparacao'));
+        return view('admin.reparacao.emedit', compact('reparacao'));
     }
 
     public function update(Request $request, $id)
@@ -65,26 +58,26 @@ class ReparacaoController extends Controller
             $reparacao->data_saida = "Em atividade";
         }
         $reparacao->update();
-        return redirect('reparacaos')->with('status',"Dados da reparação atualizado com sucesso!"); 
+        return redirect('em-reparacaos')->with('status',"Dados da reparação atualizado com sucesso!"); 
     }
 
     public function destroy($id)
     {
         $reparacao = Reparacao::find($id);
         $reparacao->delete();
-        return redirect('reparacaos')->with('status',"Dados da reparação eliminado com sucesso!"); 
+        return redirect('em-reparacaos')->with('status',"Dados da reparação eliminado com sucesso!"); 
     }
     public function edit_faturar($id)
     {
         $reparacao = Reparacao::find($id);
-        return view('admin.reparacao.faturaObra', compact('reparacao'));
+        return view('admin.reparacao.faturar', compact('reparacao'));
     }
     public function faturar(Request $request, $id)
     {
         $reparacao = Reparacao::find($id);
         $reparacao->estado_faturacao = "Faturado";
         $reparacao->update();
-        return redirect('reparacaos')->with('status',"Reparação faturado com sucesso!"); 
+        return redirect('em-reparacaos')->with('status',"Dados da reparação atualizado com sucesso!"); 
     }
 
 }

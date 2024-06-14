@@ -13,7 +13,7 @@
                     <select class="form-select" name="repara_id" required="true">                   
                         <option value="">Selecione o garegador</option>
                         @foreach($reparacao as $item)
-                             <option value="{{$item->id}}">{{$item->carregador->marca}}, {{$item->carregador->num_serie}}</option>
+                             <option value="{{$item->id}}">{{$item->id}} {{$item->carregador->marca}}, {{$item->carregador->num_serie}}</option>
                         @endforeach
                     </select>
                 <div class="col-md-6 mb-3">
@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Hora</label>
-                    <input type="time" class="form-control" name="horas" required="true">
+                    <input type="text" class="form-control" name="horas" required="true">
                 </div>
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary">Adicionar</button>
