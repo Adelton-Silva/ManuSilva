@@ -13,7 +13,7 @@
                     <select class="form-select" name="repara_id" required="true">                   
                         <option value="">Selecione o garegador</option>
                         @foreach($reparacao as $item)
-                             <option value="{{$item->id}}">{{$item->id}} {{$item->carregador->marca}}, {{$item->carregador->num_serie}}</option>
+                             <option value="{{$item->id}}">{{$item->carregador->num_serie}}, {{$item->carregador->marca}}, {{$item->id}}</option>
                         @endforeach
                     </select>
                 <div class="col-md-6 mb-3">
