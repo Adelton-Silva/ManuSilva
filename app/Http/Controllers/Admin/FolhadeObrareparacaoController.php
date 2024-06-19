@@ -31,10 +31,11 @@ class FolhadeObrareparacaoController extends Controller
         //$total = FolhadeObraReparacao::where('repara_id', $id)->selectRaw('SUM(horas) AS total_hora');
         return view('admin.folhaObra.faturarObra', compact('folha', 'total')); 
     }
-    public function add()
+    public function add($id)
     {
         $reparacao = Reparacao::all();
-        return view('admin.folhaObra.add', compact('reparacao'));
+        $rep_id = $id;
+        return view('admin.folhaObra.add', compact('reparacao', 'rep_id'));
     }
     public function insert(Request $request)
     {

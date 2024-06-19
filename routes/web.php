@@ -102,7 +102,7 @@ Route::middleware(['auth'])->group(function(){
 
     Route::get('obra/{id}',[FolhadeObrareparacaoController::class,'index']);
     Route::get('faturarobra/{id}',[FolhadeObrareparacaoController::class,'indexfactura']);
-    Route::get('add-obra', 'Admin\FolhadeObrareparacaoController@add');
+    Route::get('add-obra/{id}', 'Admin\FolhadeObrareparacaoController@add');
     Route::post('insert-obra', 'Admin\FolhadeObrareparacaoController@insert');
     Route::get('delete-obra/{id}',[FolhadeObrareparacaoController::class, 'destroy']);
     Route::get('edit-reparacaofat/{id}',[ReparacaoController::class,'faturar']);

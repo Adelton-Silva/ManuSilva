@@ -10,10 +10,11 @@
             @csrf
             <div class="row">
             <label for="">Caregador</label>
-            <select class="form-select" name="repara_id" required="true">                   
-                        <option value="">Selecione o garegador</option>
+            <select class="form-select" name="repara_id">                   
                         @foreach($reparacao as $item)
-                             <option value="{{$item->id}}">{{$item->carregador->num_serie}}, {{$item->carregador->marca}}, {{$item->id}}</option>
+                             @if($item->id == $rep_id)
+                             <option value="{{$rep_id}}">Marca: {{$item->carregador->marca}}, Número de Série: {{$item->carregador->num_serie}}</option>
+                             @endif
                         @endforeach
                     </select>
                 <div class="col-md-6 mb-3">

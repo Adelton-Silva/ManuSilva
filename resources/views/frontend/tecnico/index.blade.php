@@ -38,7 +38,7 @@
                     <td style="text-align:center">{{$item->estado}}</td>
                     <td style="text-align:center">{{$item->data_saida}}</td> 
                     <td style="text-align:center">
-                        <a href="{{ url('edit-tecnico/'.$item->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
+                        <a href="{{ url('edit-tecnico/'.$item->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a> 
                 </tr>
                 @endif
                 @endforeach

@@ -38,7 +38,7 @@
                         <a href="{{ url('faturarobra/'.$item->id)}}" class="btn btn-succes btn-sm"><i class="fa fa-money"></i> Faturar</a>
                         @endif
                         @if($item->estado_faturacao == "Faturado")
-                        <a href="{{ url('obra/'.$item->id)}}" class="btn btn-info btn-sm"><i class="fa fa-eye"></i> Ver Folha de Obra</a>
+                        <a href="{{ url('faturarobra/'.$item->id)}}" class="btn btn-info btn-sm"><i class="fa fa-eye"></i> Ver Folha de Obra</a>
                         @endif
                     </td>
                     

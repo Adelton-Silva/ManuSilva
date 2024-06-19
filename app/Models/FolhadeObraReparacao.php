@@ -17,7 +17,7 @@ class FolhadeObraReparacao extends Model
         'relizado_por',
     ];
 
-    public function cliente()
+    public function reparacao()
     {
         return $this->belongsTo(Reparacao::class,'repara_id','id');
     }

@@ -4,8 +4,6 @@
 <div class="card">
     <div class="card-header bg-primary">
         <h4 class="text-white">Folha de Obra
-        <a href="{{ url('add-obra')}}" class="btn btn-sm btn-success float-right"><i
-                                    class="fas fa-plus fa-sm text-white-50"></i> Adicionar</a>
         </h4>
     </div>
     <div class="table-responsive">
@@ -30,7 +28,6 @@
                     <td style="text-align:center">{{$item->horas}}</td>
                     <td style="text-align:center">{{$item->user->name}}</td>
                     <td style="text-align:center">
-                        <a href="{{ url('edit-cliente/'.$item->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
                         <a href="{{ url('delete-obra/'.$item->id)}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Eliminar</a>
                     </td>                
                 </tr>
@@ -42,7 +39,7 @@
         <label for="">Total Hora: </label>
         <label for="">{{$total}}</label>
         </div>
-        @if($item->user->role_as == 1)
+        @if($item->user->role_as == 1 && $item->reparacao->estado_faturacao != "Faturado")
          <a href="{{ url('edit-reparacaofat/'.$item->repara_id)}}" class="btn btn-primary btn-sm"><i class="fa fa-money"> </i>  Faturar</a>
          @endif
     </div>
