@@ -24,7 +24,7 @@
                                         <div class="row no-gutters align-items-center">
                                             <div class="col mr-2">
                                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                    Reparação de Caregador Para Faturar</div>
+                                                    <a href="">Reparação de Caregador Para Faturar</a></div>
                                                 <div class="h5 mb-0 font-weight-bold text-gray-800">
                                                 {{ App\Models\reparacao::where('estado', '=', 'TESTE FINAL')->where('estado_faturacao', '=', 'Não Faturado')->count() }}
                                                 </div>
