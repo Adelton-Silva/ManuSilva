@@ -34,7 +34,7 @@
                     <td style="text-align:center">
                         <a href="{{ url('edit-reparacao/'.$item->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
                         <a href="{{ url('delete-reparacao/'.$item->id)}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Eliminar</a>
-                        @if($item->estado_faturacao == "Não Faturado" && $item->user->role_as == 1)
+                        @if($item->estado_faturacao == "Não Faturado")
                         <a href="{{ url('faturarobra/'.$item->id)}}" class="btn btn-succes btn-sm"><i class="fa fa-money"></i> Faturar</a>
                         @endif
                         @if($item->estado_faturacao == "Faturado")

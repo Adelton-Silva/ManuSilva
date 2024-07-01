@@ -30,8 +30,12 @@
                     <td style="text-align:center">{{$item->horas}}</td>
                     <td style="text-align:center">{{$item->user->name}}</td>
                     <td style="text-align:center">
+                    @if(Auth::user()->name == $item->user->name || Auth::user()->role_as == 1)
                         <a href="{{ url('edit-obra/'.$item->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
                         <a href="{{ url('delete-obra/'.$item->id)}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Eliminar</a>
+                    @else
+                    <h6>Não tem permissão para editar</h6>
+                    @endif
                     </td>                
                 </tr>
 

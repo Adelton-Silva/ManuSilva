@@ -33,8 +33,10 @@
                     <td style="text-align:center">{{$item->estado}}</td>
                     <td style="text-align:center">{{$item->data_saida}}</td>
                     <td style="text-align:center">
+                        @if(Auth::user()->name == $item->user->name || Auth::user()->role_as == 1)
                         <a href="{{ url('emedit-reparacao/'.$item->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Editar</a>
                         <a href="{{ url('emdelete-reparacao/'.$item->id)}}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Eliminar</a>
+                        @endif
                         <a href="{{ url('obra/'.$item->id)}}" class="btn btn-info btn-sm"><i class="fa fa-eye"></i> Ver Folha de Obra</a>
                     </td>
                     

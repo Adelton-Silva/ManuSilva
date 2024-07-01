@@ -6,22 +6,24 @@
       Tip 2: you can also add an image using data-image tag
   -->
     <div class="logo">
-        <!--<a href="#" class="simple-text logo-normal">
+        <a href="#" class="simple-text logo-normal">
             ManuSilva
-            <img src="http://localhost:8000/public/image/logos/visa.png" alt="image">
-        </a>-->
+           <!-- <img src="http://localhost:8000/public/image/logos/visa.png" alt="image">-->
+        </a>
         <div class="carousel-item active">
             <!--<img src="{{asset('assets/images/1.jpg')}}" class="d-block w-100" alt="...">-->
         </div>
     </div>
     <div class="sidebar-wrapper">
-        <ul class="nav">
+        <ul class="nav"> 
+            @if(Auth::user()->role_as == 1)
             <li class="nav-item {{ Request::is('dashboard') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ url('dashboard') }}">
                     <i class="material-icons">dashboard</i>
                     <p>Dashboard</p>
                 </a>
             </li>
+            @endif
             <li class="nav-item has-submenu {{ (Request::is('clientes') or Request::is('add-cliente') ) ? 'active' : '' }}" >
 		        <a class="nav-link" href="{{ url('clientes') }}"> 
                     <i class="material-icons">persons</i>
@@ -34,19 +36,21 @@
                     <i class="material-icons">ev_station</i>
                     <p class="sidebar-normal">Carregadores</p>
                 </a>
-		            <ul class="submenu collapse">
+		            <ul class="submenu">
                     <li class="nav-item {{ Request::is('carregadores') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ url('carregadores') }}">
                             <i class="material-icons">content_paste</i>
                             <p class="sidebar-normal">Listar Carrgadores</p>
                         </a>
                     </li>
+                    @if(Auth::user()->role_as == 1)
                     <li class="nav-item {{ Request::is('reparacaos') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ url('reparacaos') }}">
                             <i class="material-icons">money</i>
                             <span class="sidebar-normal">Faturar Reparação</span>
                         </a>
                     </li>
+                    @endif
                     <li class="nav-item {{ Request::is('em-reparacaos') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ url('em-reparacaos') }}">
                             <i class="material-icons">settings</i>
@@ -55,12 +59,14 @@
                     </li>
 		            </ul>
 	        </li>
+            @if(Auth::user()->role_as == 1)
             <li class="nav-item has-submenu {{ (Request::is('users') or Request::is('add-user') ) ? 'active' : '' }}" >
 		        <a class="nav-link" href="{{ url('users') }}"> 
                     <i class="material-icons">persons</i>
                     <p class="sidebar-normal">Utilizadores</p>
                 </a>
 	        </li>
+            @endif
         </ul>
     </div>
 </div>

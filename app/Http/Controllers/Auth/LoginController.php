@@ -40,7 +40,7 @@ class LoginController extends Controller
         }
         elseif(Auth::user()->role_as == '2') // Tecnico Login
         {
-            return redirect('tecnico');
+            return redirect('carregadores');
         }
         elseif(Auth::user()->role_as == '3') // Tecnico Login
         {

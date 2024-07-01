@@ -39,7 +39,7 @@
         <label for="">Total Hora: </label>
         <label for="">{{$total}}</label>
         </div>
-        @if($item->user->role_as == 1 && $item->reparacao->estado_faturacao != "Faturado")
+        @if($item->reparacao->estado_faturacao == "Não Faturado")
          <a href="{{ url('edit-reparacaofat/'.$item->repara_id)}}" class="btn btn-primary btn-sm"><i class="fa fa-money"> </i>  Faturar</a>
          @endif
     </div>

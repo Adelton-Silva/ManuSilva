@@ -23,13 +23,14 @@ class FolhadeObrareparacaoController extends Controller
     }
     public function indexfactura($id)
     {
+        $reparacao = Reparacao::all();
         $folha = FolhadeObraReparacao::where('repara_id', $id)->get();
         $total = 0;
         foreach($folha as $somaHora){
             $total = $total + $somaHora->horas;
         }
         //$total = FolhadeObraReparacao::where('repara_id', $id)->selectRaw('SUM(horas) AS total_hora');
-        return view('admin.folhaObra.faturarObra', compact('folha', 'total')); 
+        return view('admin.folhaObra.faturarObra', compact('folha', 'total','reparacao'));  
     }
     public function add($id)
     {

@@ -57,62 +57,7 @@ Route::post('add-to-wishlist', [WishlistController::class, 'add']);
 Route::post('delete-wishlist-item', [WishlistController::class, 'deleteitem']);
 
 
-Route::middleware(['auth'])->group(function(){
-    Route::get('cart',[CartController::class,'viewcart']);
-    Route::get('checkout',[CheckoutController::class,'index']);
-    Route::post('place-order',[CheckoutController::class, 'placeorder']);
-
-    Route::get('my-orders', [UserController::class, 'index']);
-    Route::get('view-order/{id}', [UserController::class, 'view']);
-    Route::get('edit-order/{id}', [UserController::class, 'edit']);
-    Route::put('update-orders/{id}',[UserController::class,'updateord']);
-    Route::get('delete-order/{id}',[UserController::class,'destroy']);
-
-    
-    
-    Route::post('add-rating', [RatingController::class, 'add']);
-
-    Route::get('add-review/{service_slug}/userreview', [ReviewController::class, 'add']);
-    Route::post('add-review', [ReviewController::class, 'create']);
-    Route::get('edit-review/{service_slug}/userreview', [ReviewController::class, 'edit']);
-    Route::put('update-review', [ReviewController::class, 'update']);
-    
-    Route::get('wishlist', [WishlistController::class, 'index']);
-
-    Route::post('proceed-to-pay', [CheckoutController::class, 'razorpaycheck']);
-
-    Route::get('tecnico', 'Frontend\TecnicoController@index');
-    Route::get('edit-tecnico/{id}',[TecnicoController::class,'edit']);
-    Route::put('update-tecnico/{id}',[TecnicoController::class,'update']);
-    Route::get('add-tecnico', 'Frontend\TecnicoController@add');
-    Route::post('insert-tecnico', 'Frontend\TecnicoController@insert');
-    
-    Route::get('teccarregadores', 'Frontend\TECCarregadorController@index');
-    Route::get('tecadd-carregador', 'Frontend\TECCarregadorController@add');
-    Route::post('tecinsert-carregador', 'Frontend\TECCarregadorController@insert');
-    Route::get('tecedit-carregador/{id}','Frontend\TECCarregadorController@edit');
-    Route::put('tecupdate-carregador/{id}','Frontend\TECCarregadorController@update');
-
-    Route::get('profile',[ProfileController::class,'index']);
-    Route::get('profiletec',[ProfileController::class,'indextec']);
-    Route::get('edit-profile/{id}',[ProfileController::class,'edit']);
-    Route::put('update-profile/{id}',[ProfileController::class,'update']);
-    Route::get('edit-profiletec/{id}',[ProfileController::class,'editec']);
-    Route::put('update-profiletec/{id}',[ProfileController::class,'updatec']);
-
-    Route::get('obra/{id}',[FolhadeObrareparacaoController::class,'index']);
-    Route::get('faturarobra/{id}',[FolhadeObrareparacaoController::class,'indexfactura']);
-    Route::get('add-obra/{id}', 'Admin\FolhadeObrareparacaoController@add');
-    Route::post('insert-obra', 'Admin\FolhadeObrareparacaoController@insert');
-    Route::get('delete-obra/{id}',[FolhadeObrareparacaoController::class, 'destroy']);
-    Route::get('edit-reparacaofat/{id}',[ReparacaoController::class,'faturar']);
-    Route::get('edit-obra/{id}',[FolhadeObrareparacaoController::class,'edit']);
-    Route::put('update-obra/{id}',[FolhadeObrareparacaoController::class,'update']);
-
-
-});
-
-Route::middleware(['auth', 'isAdmin'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', 'Admin\FrontendController@index');
     
 
@@ -172,5 +117,56 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
     Route::get('add-user', 'Admin\UserController@add');
     Route::post('insert-user', 'Admin\UserController@insert');
+
+    Route::get('cart',[CartController::class,'viewcart']);
+    Route::get('checkout',[CheckoutController::class,'index']);
+    Route::post('place-order',[CheckoutController::class, 'placeorder']);
+
+    Route::get('my-orders', [UserController::class, 'index']);
+    Route::get('view-order/{id}', [UserController::class, 'view']);
+    Route::get('edit-order/{id}', [UserController::class, 'edit']);
+    Route::put('update-orders/{id}',[UserController::class,'updateord']);
+    Route::get('delete-order/{id}',[UserController::class,'destroy']);
+
+    
+    
+    Route::post('add-rating', [RatingController::class, 'add']);
+
+    Route::get('add-review/{service_slug}/userreview', [ReviewController::class, 'add']);
+    Route::post('add-review', [ReviewController::class, 'create']);
+    Route::get('edit-review/{service_slug}/userreview', [ReviewController::class, 'edit']);
+    Route::put('update-review', [ReviewController::class, 'update']);
+    
+    Route::get('wishlist', [WishlistController::class, 'index']);
+
+    Route::post('proceed-to-pay', [CheckoutController::class, 'razorpaycheck']);
+
+    Route::get('tecnico', 'Frontend\TecnicoController@index');
+    Route::get('edit-tecnico/{id}',[TecnicoController::class,'edit']);
+    Route::put('update-tecnico/{id}',[TecnicoController::class,'update']);
+    Route::get('add-tecnico', 'Frontend\TecnicoController@add');
+    Route::post('insert-tecnico', 'Frontend\TecnicoController@insert');
+    
+    Route::get('teccarregadores', 'Frontend\TECCarregadorController@index');
+    Route::get('tecadd-carregador', 'Frontend\TECCarregadorController@add');
+    Route::post('tecinsert-carregador', 'Frontend\TECCarregadorController@insert');
+    Route::get('tecedit-carregador/{id}','Frontend\TECCarregadorController@edit');
+    Route::put('tecupdate-carregador/{id}','Frontend\TECCarregadorController@update');
+
+    Route::get('profile',[ProfileController::class,'index']);
+    Route::get('profiletec',[ProfileController::class,'indextec']);
+    Route::get('edit-profile/{id}',[ProfileController::class,'edit']);
+    Route::put('update-profile/{id}',[ProfileController::class,'update']);
+    Route::get('edit-profiletec/{id}',[ProfileController::class,'editec']);
+    Route::put('update-profiletec/{id}',[ProfileController::class,'updatec']);
+
+    Route::get('obra/{id}',[FolhadeObrareparacaoController::class,'index']);
+    Route::get('faturarobra/{id}',[FolhadeObrareparacaoController::class,'indexfactura']);
+    Route::get('add-obra/{id}', 'Admin\FolhadeObrareparacaoController@add');
+    Route::post('insert-obra', 'Admin\FolhadeObrareparacaoController@insert');
+    Route::get('delete-obra/{id}',[FolhadeObrareparacaoController::class, 'destroy']);
+    Route::get('edit-reparacaofat/{id}',[ReparacaoController::class,'faturar']);
+    Route::get('edit-obra/{id}',[FolhadeObrareparacaoController::class,'edit']);
+    Route::put('update-obra/{id}',[FolhadeObrareparacaoController::class,'update']);
     
 });
