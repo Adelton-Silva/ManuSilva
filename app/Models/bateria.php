@@ -5,20 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class carregador extends Model
+class bateria extends Model
 {
-    use HasFactory;
-    protected $table = 'carregadors'; 
+    use HasFactory; 
+    protected $table = 'baterias'; 
     protected $fillable = [
         'cliente_id',
-        'marca',
-        'modelo',
-        'num_serie',
-        'descri_avaria',
-        'data_entrada',
-        'image',
+        'tipo',
+        'matricula',
+        'emp_marca',
+        'emp_modelo',
+        'car_tipo',
+        'car_matricula',
     ];
-
     public function cliente()
     {
         return $this->belongsTo(Cliente::class,'cliente_id','id'); 

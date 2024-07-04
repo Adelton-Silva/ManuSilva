@@ -56,11 +56,11 @@
         @yield('content')
     </div>
 
-    <div class="whatsapp-chat">
+    <!--<div class="whatsapp-chat">
         <a href="https://wa.me/+2389295840/?text=Eu%20tenho%20interesse%20no%20seu%20serviço" target="_blank">
             <img src="{{ asset('assets/images/whatsapp-icon.png') }}" alt="whatsapp-logo" height="80px" width="80px">
         </a>
-    </div>
+    </div>-->
 
 
     <!--   Core JS Files   -->
@@ -72,6 +72,7 @@
 
 
     <!--Start of Tawk.to Script-->
+    <!--
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {},
             Tawk_LoadStart = new Date();
@@ -84,7 +85,7 @@
             s1.setAttribute('crossorigin', '*');
             s0.parentNode.insertBefore(s1, s0);
         })();
-    </script>
+    </script>-->
     <!--End of Tawk.to Script-->
 
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>

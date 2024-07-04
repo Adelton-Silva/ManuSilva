@@ -13,15 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('carregadors', function (Blueprint $table) {
+        Schema::create('baterias', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('cliente_id');
-            $table->string('marca');
-            $table->string('modelo');
-            $table->longText('num_serie');
-            $table->longText('descri_avaria');
-            $table->string('data_entrada');
-            $table->string('image');
+            $table->string('tipo');
+            $table->string('matricula');
+            $table->string('emp_marca');
+            $table->string('emp_modelo');
+            $table->string('car_tipo');
+            $table->string('car_matricula');
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('carregadors'); 
+        Schema::dropIfExists('baterias'); 
     }
 };

@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\EmReparacaoController;
 use App\Http\Controllers\Frontend\TecnicoController;
 use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\Admin\FolhadeObrareparacaoController;
+use App\Http\Controllers\Admin\BateriaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -168,5 +169,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('edit-reparacaofat/{id}',[ReparacaoController::class,'faturar']);
     Route::get('edit-obra/{id}',[FolhadeObrareparacaoController::class,'edit']);
     Route::put('update-obra/{id}',[FolhadeObrareparacaoController::class,'update']);
+
+    Route::get('baterias', 'Admin\BateriaController@index');
+    Route::get('add-bateria', 'Admin\BateriaController@add');
+    Route::post('insert-baterias', 'Admin\BateriaController@insert');
+    Route::get('edit-bateria/{id}',[BateriaController::class,'edit']);
+    Route::put('update-bateria/{id}',[BateriaController::class,'update']);
+    Route::get('delete-bateria/{id}',[BateriaController::class,'destroy']);
     
 });

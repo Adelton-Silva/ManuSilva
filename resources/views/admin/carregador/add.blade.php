@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Número de Série</label>
-                    <input type="text" name="num_serie" class="form-control" required="true"></textarea>
+                    <input type="text" name="num_serie" class="form-control" required="true"></input>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Data Entrada</label>
