@@ -177,4 +177,7 @@ Route::middleware(['auth'])->group(function () {
     Route::put('update-bateria/{id}',[BateriaController::class,'update']);
     Route::get('delete-bateria/{id}',[BateriaController::class,'destroy']);
     
+    Route::get('manutencao', 'Admin\ManutencaoBateriaController@index');
+    Route::get('add-manutencao', 'Admin\ManutencaoBateriaController@add');
+    Route::post('insert-manutencao', 'Admin\ManutencaoBateriaController@insert');
 });

@@ -59,7 +59,7 @@
                     </li>
 		            </ul>
 	        </li>
-            <li class="nav-item has-submenu {{ (Request::is('baterias') or Request::is('add-user') ) ? 'active' : '' }}" >
+            <li class="nav-item has-submenu {{ (Request::is('baterias') or Request::is('baterias') or Request::is('manutencao') ) ? 'active' : '' }}" >
 		        <a class="nav-link" href="{{ url('baterias') }}"> 
                     <i class="material-icons">calendar_today</i>
                     <p class="sidebar-normal">Baterias</p>
@@ -67,11 +67,17 @@
                 <ul class="submenu">
                     <li class="nav-item {{ Request::is('baterias') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ url('baterias') }}">
+                            <i class="material-icons">content_paste</i>
+                            <span class="sidebar-normal">Lista Baterias</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ Request::is('manutencao') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ url('manutencao') }}">
                             <i class="material-icons">settings</i>
                             <span class="sidebar-normal">Manutenção</span>
                         </a>
                     </li>
-		            </ul>
+		        </ul>
 	        </li>
             @if(Auth::user()->role_as == 1)
             <li class="nav-item has-submenu {{ (Request::is('users') or Request::is('add-user') ) ? 'active' : '' }}" >

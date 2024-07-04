@@ -13,7 +13,7 @@ class BateriaController extends Controller
     {
         $baterias = Bateria::all();
         return view('admin.bateria.index', compact('baterias'));
-    }
+    } 
     public function add()
     {
         $cliente = Cliente::all();
